@@ -22,17 +22,17 @@ public class Movie implements Serializable{
 	@Column(name = "movie_id")
 	private int id; 
 	private String name;
-	private String descriptin;
+	private String description;
 	private String image;
 	@Column(name = "create_at")
 	private LocalDateTime createAt; 
 	@Column(name = "releas_date")
-	private LocalDate releasDate;
+	private LocalDate releaseDate;
 	private String actors;
 	@ManyToOne
 	@JoinColumn(name = "gender_id")
 	private Gender genderid;
-	private int raing;
+	private int rating;
 	
 	public Movie () {
 		
@@ -43,13 +43,13 @@ public class Movie implements Serializable{
 		super();
 		this.id = id;
 		this.name = name;
-		this.descriptin = descriptin;
+		this.description = descriptin;
 		this.image = image;
 		this.createAt = createAt;
-		this.releasDate = releasDate;
+		this.releaseDate = releasDate;
 		this.actors = actors;
 		this.genderid = genderid;
-		this.raing = raing;
+		this.rating = raing;
 	}
 
 	/**
@@ -83,15 +83,15 @@ public class Movie implements Serializable{
 	/**
 	 * @return the descriptin
 	 */
-	public String getDescriptin() {
-		return descriptin;
+	public String getDescription() {
+		return description;
 	}
 
 	/**
-	 * @param descriptin the descriptin to set
+	 * @param descriptin the description to set
 	 */
-	public void setDescriptin(String descriptin) {
-		this.descriptin = descriptin;
+	public void setDescription(String descriptin) {
+		this.description = descriptin;
 	}
 
 	/**
@@ -125,15 +125,15 @@ public class Movie implements Serializable{
 	/**
 	 * @return the releasDate
 	 */
-	public LocalDate getReleasDate() {
-		return releasDate;
+	public LocalDate getReleaseDate() {
+		return releaseDate;
 	}
 
 	/**
 	 * @param releasDate the releasDate to set
 	 */
-	public void setReleasDate(LocalDate releasDate) {
-		this.releasDate = releasDate;
+	public void setReleaseDate(LocalDate releasDate) {
+		this.releaseDate = releasDate;
 	}
 
 	/**
@@ -167,15 +167,15 @@ public class Movie implements Serializable{
 	/**
 	 * @return the raing
 	 */
-	public int getRaing() {
-		return raing;
+	public int getRating() {
+		return rating;
 	}
 
 	/**
 	 * @param raing the raing to set
 	 */
-	public void setRaing(int raing) {
-		this.raing = raing;
+	public void setRating(int raing) {
+		this.rating = raing;
 	}
 		
 }
